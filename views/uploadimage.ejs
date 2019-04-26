@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet"
+   href="/css/bootstrap.css" />
+
+<link rel="stylesheet"
+   href="css/custom.css" />
+
+  <title></title>
+</head>
+<body>
+  <div class="contain">
+  <form class="form-horizontal" action="/upload" method="POST" enctype="multipart/form-data">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Upload Image</legend>
+
+  
+  <div class="col-md-4">
+    <label>Select Image <input id=" myImage" name="myImage" class="input-file" type="file"></label>
+    
+  </div>
+
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Btnupload"></label>
+  <div class="col-md-4">
+    <button id="Btnupload" name="Btnupload" class="btn btn-primary">Upload</button>
+  </div>
+</div>
+<div class="image">
+<img src="<%=typeof file !='undefined' ? file : '' %>" class="resposive-img" >
+</div>
+<br>
+<div class="message"><%= typeof msg != 'undefined' ? msg : '' %></div>
+
+</fieldset>
+</form>
+</div>
+
+<script type="text/javascript" src="/js/bootstrap.js"></script>
+<script type="text/javascript" src="/js/jquery-3.3.0.min.js"></script>
+
+</body>
+</html>
